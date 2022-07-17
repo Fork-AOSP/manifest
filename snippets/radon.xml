@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="RadonOS"
+        fetch="https://github.com/RadonOS"
+        revision="twelve" />
+
+<!-- Build repositories -->
+  <project path="build/make" name="build" remote="RadonOS" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+   <project path="build/soong" name="build_soong" remote="RadonOS" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="build/blueprint" name="build_blueprint" remote="RadonOS" />
+  <project path="art" name="art" remote="RadonOS" />
+  <project path="bionic" name="bionic" remote="RadonOS" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="RadonOS" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy_legacy" remote="RadonOS" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="RadonOS" />
+  <project path="device/radon/sepolicy" name="device_radon_sepolicy" remote="RadonOS" />
+  <project path="device/qcom/sepolicy/vndr" name="device_qcom_sepolicy_vndr" remote="RadonOS" />
+  <project path="frameworks/av" name="frameworks_av" remote="RadonOS" />
+  <project path="frameworks/base" name="frameworks_base" remote="RadonOS" />
+  <project path="frameworks/native" name="frameworks_native" remote="RadonOS" />
+  <project path="frameworks/opt/net/timezonepicker" name="frameworks_opt_timezonepicker" remote="RadonOS" />
+  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="RadonOS" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="RadonOS" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="RadonOS" />
+  <project path="external/aac" name="external_aac" remote="RadonOS" />
+  <project path="external/avb" name="external_avb" remote="RadonOS" />
+  <project path="external/boringssl" name="external_boringssl" remote="RadonOS" />
+  <project path="external/cldr" name="external_cldr" remote="RadonOS" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="RadonOS" />
+  <project path="external/elfutils" name="external_elfutils" remote="RadonOS" />
+  <project path="external/guice" name="external_guice" remote="RadonOS" />
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="RadonOS" />
+  <project path="external/icu" name="external_icu" remote="RadonOS" />
+  <project path="external/libcxx" name="external_libcxx" remote="RadonOS" />
+  <project path="external/mksh" name="external_mksh" remote="RadonOS" />
+  <project path="external/perfetto" name="external_perfetto" remote="RadonOS" />
+  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="RadonOS" />
+  <project path="hardware/nxp/nfc" name="hardware_nxp_nfc" remote="RadonOS" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="RadonOS" />
+  <project path="packages/modules/adb" name="packages_modules_adb" remote="RadonOS" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="RadonOS" />
+  <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="RadonOS" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="RadonOS" />
+  <project path="packages/apps/KeyChain" name="packages_apps_KeyChain" remote="RadonOS" />
+  <project path="packages/apps/CarrierConfig" name="packages_apps_CarrierConfig" remote="RadonOS" />
+  <project path="packages/apps/Stk" name="packages_apps_Stk" remote="RadonOS" />
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="RadonOS" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="RadonOS" />
+  <project path="packages/apps/Settings" name="packages_apps_settings" remote="RadonOS" />
+  <project path="system/bpf" name="system_bpf" remote="RadonOS" />
+  <project path="system/extras" name="system_extras" remote="RadonOS" />
+  <project path="system/keymaster" name="system_keymaster" remote="RadonOS" />
+  <project path="system/media" name="system_media" remote="RadonOS" />
+  <project path="system/netd" name="system_netd" remote="RadonOS" />
+  <project path="system/nfc" name="system_nfc" remote="RadonOS" />
+  <project path="system/libhwbinder" name="system_libhwbinder" remote="RadonOS" />
+  <project path="system/libufdt" name="system_libufdt" remote="RadonOS" />
+  <project path="system/tools/aidl" name="system_tools_aidl" remote="RadonOS" />
+  <project path="system/tools/hidl" name="system_tools_hidl" remote="RadonOS" />
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="RadonOS" />
+  <project path="system/libhidl" name="system_libhidl" remote="RadonOS" />
+  <project path="system/vold" name="system_vold" remote="RadonOS" />
+  <project path="system/update/engine" name="system_update_engine" remote="RadonOS" />
+  <project path="system/timezone" name="system_timezone" remote="RadonOS" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="RadonOS" />
+  <project path="system/security" name="system_security" remote="RadonOS" />
+  <project path="system/incremental/delivery" name="system_incremental_delivery" remote="RadonOS" />
+  <project path="system/core" name="system_core" remote="RadonOS" />
+  <project path="vendor/radon" name="vendor_radon" remote="RadonOS" />
+</manifest>
