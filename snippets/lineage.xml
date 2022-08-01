@@ -20,7 +20,53 @@
 <project path="external/exfatprogs" name="android_external_exfatprogs" remote="lineage" />
 
 <!-- HALs -->
-<project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="lineage" />
+<project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="lineage" >
+
+<!-- add guard for AOSP hardware/qcom dir -->
+<linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+
+<!-- add guards for CAF repositories -->
+<linkfile src="os_pickup_qssi.bp" dest="hardware/qcom/msm8953/Android.bp" />
+<linkfile src="os_pickup.mk" dest="hardware/qcom/msm8953/Android.mk" />
+<linkfile src="os_pickup.bp" dest="hardware/qcom/msm8996/Android.bp" />
+<linkfile src="os_pickup.mk" dest="hardware/qcom/msm8996/Android.mk" />
+<linkfile src="os_pickup.bp" dest="hardware/qcom/msm8998/Android.bp" />
+<linkfile src="os_pickup.mk" dest="hardware/qcom/msm8998/Android.mk" />
+<linkfile src="os_pickup_qssi.bp" dest="hardware/qcom/sdm845/Android.bp" />
+<linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
+<linkfile src="os_pickup_qssi.bp" dest="hardware/qcom/sm8150/Android.bp" />
+<linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
+<linkfile src="os_pickup_qssi.bp" dest="hardware/qcom/sm8250/Android.bp" />
+<linkfile src="os_pickup.mk" dest="hardware/qcom/sm8250/Android.mk" />
+<linkfile src="os_pickup_qssi.bp" dest="hardware/qcom/sm8350/Android.bp" />
+<linkfile src="os_pickup.mk" dest="hardware/qcom/sm8350/Android.mk" />
+
+<!-- add namespace for BT adv audio, as required for QTI BT stack -->
+<linkfile src="os_pickup_qssi_bt.bp" dest="device/qcom/qssi/Android.bp" />
+</project>
+
+<project path="hardware/qcom/bt" name="android_hardware_qcom_bt" groups="qcom,legacy-qcom" remote="lineage" revision="lineage-19.1-caf" />
+<project path="hardware/qcom/msm8953/audio" name="android_hardware_qcom_audio" groups="qcom,msm8953" remote="lineage" revision="lineage-19.1-caf-msm8953" />
+<project path="hardware/qcom/msm8953/display" name="android_hardware_qcom_display" groups="qcom" remote="lineage" revision="lineage-19.1-caf-msm8953" />
+<project path="hardware/qcom/msm8953/media" name="android_hardware_qcom_media" groups="qcom,msm8953" remote="lineage" revision="lineage-19.1-caf-msm8953" />
+<project path="hardware/qcom/msm8996/audio" name="android_hardware_qcom_audio" groups="qcom,legacy-qcom" remote="lineage" revision="lineage-19.1-caf-msm8996" />
+<project path="hardware/qcom/msm8996/display" name="android_hardware_qcom_display" groups="qcom,legacy-qcom" remote="lineage" revision="lineage-19.1-caf-msm8996" />
+<project path="hardware/qcom/msm8996/media" name="android_hardware_qcom_media" groups="qcom,legacy-qcom" remote="lineage" revision="lineage-19.1-caf-msm8996" />
+<project path="hardware/qcom/msm8998/audio" name="android_hardware_qcom_audio" groups="qcom,legacy-qcom" remote="lineage" revision="lineage-19.1-caf-msm8998" />
+<project path="hardware/qcom/msm8998/display" name="android_hardware_qcom_display" groups="qcom,legacy-qcom" remote="lineage" revision="lineage-19.1-caf-msm8998" />
+<project path="hardware/qcom/msm8998/media" name="android_hardware_qcom_media" groups="qcom,legacy-qcom" remote="lineage" revision="lineage-19.1-caf-msm8998" />
+<project path="hardware/qcom/sdm845/audio" name="android_hardware_qcom_audio" groups="qcom,sdm845" remote="lineage" revision="lineage-19.1-caf-sdm845" />
+<project path="hardware/qcom/sdm845/display" name="android_hardware_qcom_display" groups="qcom" remote="lineage" revision="lineage-19.1-caf-sdm845" />
+<project path="hardware/qcom/sdm845/media" name="android_hardware_qcom_media" groups="qcom,sdm845" remote="lineage" revision="lineage-19.1-caf-sdm845" />
+<project path="hardware/qcom/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,msmnile" remote="lineage" revision="lineage-19.1-caf-sm8150" />
+<project path="hardware/qcom/sm8150/display" name="android_hardware_qcom_display" groups="qcom" remote="lineage" revision="lineage-19.1-caf-sm8150" />
+<project path="hardware/qcom/sm8150/media" name="android_hardware_qcom_media" groups="qcom,msmnile" remote="lineage" revision="lineage-19.1-caf-sm8150" />
+<project path="hardware/qcom/sm8250/audio" name="android_hardware_qcom_audio" groups="qcom,kona" remote="lineage" revision="lineage-19.1-caf-sm8250" />
+<project path="hardware/qcom/sm8250/display" name="android_hardware_qcom_display" groups="qcom" remote="lineage" revision="lineage-19.1-caf-sm8250" />
+<project path="hardware/qcom/sm8250/media" name="android_hardware_qcom_media" groups="qcom,kona" remote="lineage" revision="lineage-19.1-caf-sm8250" />
+<project path="hardware/qcom/sm8350/audio" name="android_hardware_qcom_audio" groups="qcom,lahaina" remote="lineage" revision="lineage-19.1-caf-sm8350" />
+<project path="hardware/qcom/sm8350/display" name="android_hardware_qcom_display" groups="qcom" remote="lineage" revision="lineage-19.1-caf-sm8350" />
+<project path="hardware/qcom/sm8350/media" name="android_hardware_qcom_media" groups="qcom,lahaina" remote="lineage" revision="lineage-19.1-caf-sm8350" />
 
 <project path="hardware/qcom/vr" name="android_hardware_qcom_vr" remote="lineage" />
 <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" remote="lineage" />
