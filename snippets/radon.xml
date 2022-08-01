@@ -71,7 +71,6 @@
   <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="RadonOS" />
   <project path="system/libhidl" name="system_libhidl" remote="RadonOS" />
   <project path="system/vold" name="system_vold" remote="RadonOS" />
-  <project path="system/update/engine" name="system_update_engine" remote="RadonOS" />
   <project path="system/timezone" name="system_timezone" remote="RadonOS" />
   <project path="system/sepolicy" name="system_sepolicy" remote="RadonOS" />
   <project path="system/security" name="system_security" remote="RadonOS" />
